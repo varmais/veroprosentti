@@ -32,7 +32,7 @@ function yearlySalary(options) {
   return options.monthly_salary * 12;
 }
 
-export default function veroprosentti(config) {
+export function veroprosentti(config) {
   const options = Object.assign({}, defaultOptions, config);
   validateSalaryOptions(options);
 

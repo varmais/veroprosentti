@@ -18,7 +18,7 @@ Function returns an object containing annual salary, annual tax amount and tax p
 ## Examples
 
 ```javascript
-import veroprosentti, { municipality_taxes } from "veroprosentti";
+import { veroprosentti, municipality_taxes } from "veroprosentti";
 
 veroprosentti({ annual_salary: 50000 });
 // => { salary: 50000, tax: 12231.17, tax_percentage: 24.46 }

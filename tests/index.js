@@ -1,5 +1,5 @@
 import test from "tape";
-import veroprosentti, { municipality_taxes } from "../src/index";
+import { veroprosentti, municipality_taxes } from "../src/index";
 
 test("throws error when monthly or yearly salary is not given", function(t) {
   t.throws(() => veroprosentti());
