@@ -1,9 +1,12 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './src/index.js',
+  mode: "production",
+  entry: "./src/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    library: "veroprosentti",
+    libraryTarget: "umd",
+    filename: "index.js",
+    path: path.resolve(__dirname, "lib")
   }
 };
