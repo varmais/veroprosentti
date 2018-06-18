@@ -1,0 +1,19 @@
+{
+  "name": "veroprosentti",
+  "version": "1.0.0",
+  "description": "Veroprosenttilaskuri",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "veroprosentti",
+    "laskuri",
+    "vero",
+    "suomi",
+    "tulovero",
+    "kunnallisvero"
+  ],
+  "author": "Teemu Tiilikainen",
+  "license": "MIT"
+}
