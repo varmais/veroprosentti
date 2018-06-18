@@ -1,6 +1,6 @@
 import config from "./config";
 
-export function calculateIncomeTax(salary) {
+export function stateIncomeTax(salary) {
   const { income_tax } = config;
 
   if (typeof salary !== "number") {
