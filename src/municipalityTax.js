@@ -33,7 +33,10 @@ function earningDeduction(effectiveIncome, salary, stateIncomeTax) {
   return workIncomeDeduction < 0 ? 0 : workIncomeDeduction;
 }
 
-export function municipalityTax(salary) {
+export function municipalityTax(
+  salary,
+  taxPercentage = config.municipality_tax.AVERAGE
+) {
   const effectiveIncome = calculateEffectiveIncome(salary);
   const effectiveIncomeAfterDeductions =
     effectiveIncome -
@@ -41,7 +44,7 @@ export function municipalityTax(salary) {
     basicDeduction(effectiveIncome, salary);
   return orZero(
     round(
-      effectiveIncomeAfterDeductions * config.municipality_tax.average -
+      effectiveIncomeAfterDeductions * taxPercentage -
         earningDeduction(effectiveIncome, salary, stateIncomeTax(salary))
     )
   );
