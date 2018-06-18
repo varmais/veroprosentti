@@ -9,3 +9,11 @@ test("calculates municipality tax", function(t) {
   t.equal(municipalityTax(0), 0);
   t.end();
 });
+
+test("throws an error when parameter is not a number", function(t) {
+  t.throws(() => municipalityTax());
+  t.throws(() => municipalityTax("string"));
+  t.throws(() => municipalityTax(null));
+  t.doesNotThrow(() => municipalityTax(32));
+  t.end();
+});

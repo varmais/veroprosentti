@@ -10,9 +10,9 @@ test("calculates state income tax", function(t) {
 });
 
 test("throws an error when parameter is not a number", function(t) {
-  const expectedError = "stateIncomeTax expects a number";
-  t.throws(() => stateIncomeTax(), expectedError);
-  t.throws(() => stateIncomeTax("string"), expectedError);
-  t.throws(() => stateIncomeTax(null), expectedError);
+  t.throws(() => stateIncomeTax());
+  t.throws(() => stateIncomeTax("string"));
+  t.throws(() => stateIncomeTax(null));
+  t.doesNotThrow(() => stateIncomeTax(24));
   t.end();
 });
