@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Veroprosenttilaskuri",
   "main": "lib/index.js",
-  "private": true,
   "scripts": {
     "build": "npx webpack",
     "test": "babel-tape-runner tests/**/*.js",
@@ -17,7 +16,13 @@
     "tulovero",
     "kunnallisvero"
   ],
-  "author": "Teemu Tiilikainen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/varmais/veroprosentti.git"
+  },
+  "homepage": "https://github.com/varmais/veroprosentti",
+  "bugs": "https://github.com/varmais/veroprosentti/issues",
+  "author": "Teemu Tiilikainen <teemu@rebase-i.com> <http://varmais.fi>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "~6.26.0",
