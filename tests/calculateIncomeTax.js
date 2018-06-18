@@ -7,8 +7,8 @@ test("with 0 income returns 0", function(t) {
 });
 
 test("rounds tax to two decimals if necessary", function(t) {
-  t.equal(calculateIncomeTax(16900), 0);
-  t.equal(calculateIncomeTax(16901), 8.06);
+  t.equal(calculateIncomeTax(17200), 0);
+  t.equal(calculateIncomeTax(17201), 8.06);
   t.end();
 });
 

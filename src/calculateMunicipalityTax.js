@@ -12,17 +12,17 @@ function deductIncomeGenerationDeduction(salary) {
 }
 
 function deductPensionInsurance(effectiveIncome, salary) {
-  const pensionInsurancePercentage = 0.0615; // 6.15 %
+  const pensionInsurancePercentage = 0.0635; // 6.35 %
   return effectiveIncome - salary * pensionInsurancePercentage;
 }
 
 function deductUnemploymentInsurance(effectiveIncome, salary) {
-  const unemploymentInsurancePercentage = 0.016; // 1.6 %
+  const unemploymentInsurancePercentage = 0.019; // 1.9 %
   return effectiveIncome - salary * unemploymentInsurancePercentage;
 }
 
 function deductHealthInsurance(effectiveIncome, salary) {
-  const healthInsurancePercentage = 0.0158; // 1.58%
+  const healthInsurancePercentage = 0.0153; // 1.53%
   if (salary > 14000) {
     return effectiveIncome - salary * healthInsurancePercentage;
   }
@@ -53,7 +53,7 @@ function calculateIncomeDeduction(salary) {
 function calculateBasicDeduction(effectiveIncome, salary) {
   const incomeDeduction = calculateIncomeDeduction(salary);
   const basicDeduction =
-    3060 - (effectiveIncome - incomeDeduction - 3060) * 0.18;
+    3100 - (effectiveIncome - incomeDeduction - 3100) * 0.18;
   return basicDeduction < 0 ? 0 : basicDeduction;
 }
 
@@ -61,11 +61,11 @@ function maxEarningDeduction(effectiveIncome, salary) {
   if (salary > 33000) {
     const stateEffectiveIncome = (effectiveIncome - 2500) * 0.12;
     const stateEffectiveIncomeMax =
-      stateEffectiveIncome > 1420 ? 1420 : stateEffectiveIncome;
+      stateEffectiveIncome > 1540 ? 1540 : stateEffectiveIncome;
     const overEffectiveStateIncomeMax = salary - 750 - 33000;
-    return stateEffectiveIncomeMax - overEffectiveStateIncomeMax * 0.0151;
+    return stateEffectiveIncomeMax - overEffectiveStateIncomeMax * 0.0165;
   }
-  return 1420;
+  return 1540;
 }
 
 function calculateEarningsDeduction(effectiveIncome, salary, stateIncomeTax) {

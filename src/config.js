@@ -1,9 +1,9 @@
 export default {
   income_tax: {
-    level1: { limit: 16900, amount: 8, tax: 0.0625 },
-    level2: { limit: 25300, amount: 533, tax: 0.175 },
-    level3: { limit: 41200, amount: 3315.5, tax: 0.215 },
-    level4: { limit: 73100, amount: 10174, tax: 0.315 }
+    level1: { limit: 17200, amount: 8, tax: 0.06 },
+    level2: { limit: 25700, amount: 518, tax: 0.1725 },
+    level3: { limit: 42400, amount: 3398.75, tax: 0.2125 },
+    level4: { limit: 74200, amount: 10156.25, tax: 0.3125 }
   },
   municipality_tax: {
     average: 0.1986
