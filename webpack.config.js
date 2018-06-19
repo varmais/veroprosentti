@@ -7,6 +7,7 @@ module.exports = {
     library: "veroprosentti",
     libraryTarget: "umd",
     filename: "index.js",
-    path: path.resolve(__dirname, "lib")
+    path: path.resolve(__dirname, "lib"),
+    globalObject: "this"
   }
 };
